@@ -2,7 +2,8 @@
   <div class="professors">
     <h1>All Professors</h1>
     <div v-for="professor in professors">
-      <h2>{{ professor.name }}</h2>
+      <h2>{{ professor.name }} - {{ professor.school }}</h2>
+      <button>View Professor</button>
     </div>
   </div>
 </template>
