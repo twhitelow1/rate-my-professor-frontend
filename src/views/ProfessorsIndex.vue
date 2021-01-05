@@ -1,6 +1,7 @@
 <template>
   <div class="professors">
     <h1>All Professors</h1>
+    <input type="text" name="search" /> <button>Search</button>
     <div v-for="professor in professors">
       <h2>{{ professor.name }} - {{ professor.school }}</h2>
       <button>View Professor</button>
@@ -16,7 +17,22 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      professors: [],
+      professors: [
+        {
+          id: 1,
+          name: "Todd Whitelow",
+          title: "Lead Professor",
+          school: "Hard Knox",
+          department: "radness",
+        },
+        {
+          id: 1,
+          name: "Jesse James",
+          title: "Lead Professor",
+          school: "Hard Knox",
+          department: "Bad Assery",
+        },
+      ],
     };
   },
   created: function () {
