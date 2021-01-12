@@ -2,8 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import ProfessorsIndex from '../views/ProfessorsIndex.vue';
-import ProfessorShow from "../views/ProfessorShow.vue";
-import ProfessorNew from "../views/ProfessorNew.vue";
+import ProfessorsShow from "../views/ProfessorShow.vue";
+import ProfessorsNew from "../views/ProfessorNew.vue";
 
 Vue.use(VueRouter);
 
@@ -14,14 +14,14 @@ const routes = [
     component: Home
   },
   {
-    path: "/professors/:id",
-    name: "professors-show",
-    component: ProfessorShow,
-  },
-  {
     path: "/professors/new",
     name: "professors-new",
-    component: ProfessorNew,
+    component: ProfessorsNew,
+  },
+  {
+    path: "/professors/:id",
+    name: "professors-show",
+    component: ProfessorsShow,
   },
   {
     path: '/professors',
