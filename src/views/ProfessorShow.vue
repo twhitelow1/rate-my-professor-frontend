@@ -23,6 +23,7 @@ export default {
   data: function () {
     return {
       professor: [{}],
+      reviews: [],
       errors: [],
     };
   },
@@ -32,6 +33,15 @@ export default {
       .then((response) => {
         console.log("professors show", response);
         this.professor = response.data;
+      })
+      .catch((error) => {
+        this.errors = error.response.data.errors;
+      });
+    axios
+      .get("/reviews/")
+      .then((response) => {
+        console.log("reviews index", response);
+        this.reviews = response.data;
       })
       .catch((error) => {
         this.errors = error.response.data.errors;

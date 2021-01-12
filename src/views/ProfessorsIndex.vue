@@ -5,7 +5,7 @@
     <div v-for="professor in professors">
       <h2>{{ professor.name }} - {{ professor.school }}</h2>
       <router-link v-bind:to="`/professors/${professor.id}`">View Professor</router-link>
-      <button>View Professor</button>
+      <!-- <button>View Professor</button> -->
     </div>
   </div>
 </template>
