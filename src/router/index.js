@@ -20,7 +20,7 @@ const routes = [
   {
     path: '/professors',
     name: 'Professors',
-    component: ProfessorsIndex
+    component: ProfessorsIndex,
   },
   {
     path: '/about',
