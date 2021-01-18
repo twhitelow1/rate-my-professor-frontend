@@ -5,7 +5,8 @@
     <p>School: {{ professor[0].school }}</p>
     <p>Title: {{ professor[0].title }}</p>
     <p>Department: {{ professor[0].department }}</p>
-    <button> Add Review </button>
+
+    <router-link :to="`/professors/${professor[0].id}/add-review`" tag="button">Add Review</router-link>
 
     <h2>Reviews</h2>
     <div v-for="review in professor[0].reviews">
