@@ -6,13 +6,17 @@
     <p>Title: {{ professor[0].title }}</p>
     <p>Department: {{ professor[0].department }}</p>
 
-    <router-link to="/professors">Back to all professors</router-link>
 
     <h2>Reviews</h2>
-    <p>Reviewer Name: </p>
-    <p>Professor Rating: </p>
+    <div v-for="review in professor[0].reviews">
+    <p>Reviewer Name: {{ review.reviewer }}</p>
+    <p>Professor Rating:{{ review.rating }} </p>
     <p>Review:</p>
-    <p>Review text will go here....</p>
+    <p>{{ review.text }}</p>
+    <p>-------------------------------------</p>
+    </div>
+    <router-link to="/professors">Back to all professors</router-link>
+
     
   </div>
 </template>
@@ -29,7 +33,7 @@ export default {
   },
   created: function () {
     axios
-      .get("/professors/" + this.$route.params.id)
+      .get("api/professors/" + this.$route.params.id)
       .then((response) => {
         console.log("professors show", response);
         this.professor = response.data;
@@ -37,15 +41,15 @@ export default {
       .catch((error) => {
         this.errors = error.response.data.errors;
       });
-    axios
-      .get("/reviews/")
-      .then((response) => {
-        console.log("reviews index", response);
-        this.reviews = response.data;
-      })
-      .catch((error) => {
-        this.errors = error.response.data.errors;
-      });
+    // axios
+    //   .get("api/reviews/")
+    //   .then((response) => {
+    //     console.log("reviews index", response);
+    //     this.reviews = response.data;
+    //   })
+    //   .catch((error) => {
+    //     this.errors = error.response.data.errors;
+    //   });
   },
   methods: {},
 };
