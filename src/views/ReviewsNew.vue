@@ -1,22 +1,22 @@
 <template>
-  <div class="reviews-new">
-    <h1>New Review for {{professor[0].name}}</h1>
-    <div>
-      Your Name: <input type="text" v-model="newReviewReviewer" /> <br/>
-      Rating: <input type="text" v-model="newReviewRating" /> <br/>
-      Review Text: <input type="text" v-model="newReviewText" /> <br/>
-      <button v-on:click="createReview()">Submit Review</button>
+  <div class="reviews-new" align="center">
+    <h2>New Review for {{ professor[0].name }}</h2>
+    <div align="center">
+      Your Name: <input type="text" v-model="newReviewReviewer" /> Rating:
+      <input type="text" v-model="newReviewRating" /> Review Text:
+      <input type="text" v-model="newReviewText" />
     </div>
+    <br />
+    <button v-on:click="createReview()">Submit Review</button>
   </div>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script>
 import axios from "axios";
 export default {
-  data: function () {
+  data: function() {
     return {
       newReviewReviewer: "",
       newReviewProfId: null,
@@ -25,7 +25,7 @@ export default {
       professor: {},
     };
   },
-  created: function () {
+  created: function() {
     axios
       .get("api/professors/" + this.$route.params.professorId)
       .then((response) => {
@@ -37,7 +37,7 @@ export default {
       });
   },
   methods: {
-    createReview: function () {
+    createReview: function() {
       var professorId = this.$route.params.professorId;
 
       var params = {
