@@ -1,6 +1,8 @@
 <template>
   <div style="margin-bottom: 2em" class="reviews-new" align="center">
-    <h2>New Review for {{ professor[0].name }}</h2>
+    <h2>
+      New Review for <strong>{{ professor[0].name }}</strong>
+    </h2>
     <div align="center">
       Your Name: <input type="text" v-model="newReviewReviewer" /> Rating:
       <input type="text" v-model="newReviewRating" /> Review Text:
