@@ -2,10 +2,30 @@
   <div style="margin-bottom: 2em" class="professors-new" align="center">
     <h2>New Professor</h2>
     <div align="center">
-      Name: <input type="text" v-model="newProfessorName" /> School:
-      <input type="text" v-model="newProfessorSchool" /> Title:
-      <input type="text" v-model="newProfessorTitle" /> Department:
-      <input type="text" v-model="newProfessorDepartment" />
+      Name:
+      <input
+        type="text"
+        v-model="newProfessorName"
+        style="margin-right: 10px"
+      />
+      School:
+      <input
+        type="text"
+        v-model="newProfessorSchool"
+        style="margin-right: 10px"
+      />
+      Title:
+      <input
+        type="text"
+        v-model="newProfessorTitle"
+        style="margin-right: 10px"
+      />
+      Department:
+      <input
+        type="text"
+        v-model="newProfessorDepartment"
+        style="margin-right: 10px"
+      />
     </div>
     <br />
     <button v-on:click="createProfessor()">
