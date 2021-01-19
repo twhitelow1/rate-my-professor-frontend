@@ -7,7 +7,11 @@
       <input type="text" v-model="newReviewText" />
     </div>
     <br />
-    <button v-on:click="createReview()">Submit Review</button>
+    <button v-on:click="createReview()">
+      Submit Review <br />
+      <br />
+      <img src="/images/Favorites/icons8-speaker-notes-96.png" />
+    </button>
   </div>
 </template>
 
@@ -16,7 +20,7 @@
 <script>
 import axios from "axios";
 export default {
-  data: function() {
+  data: function () {
     return {
       newReviewReviewer: "",
       newReviewProfId: null,
@@ -25,7 +29,7 @@ export default {
       professor: {},
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("api/professors/" + this.$route.params.professorId)
       .then((response) => {
@@ -37,7 +41,7 @@ export default {
       });
   },
   methods: {
-    createReview: function() {
+    createReview: function () {
       var professorId = this.$route.params.professorId;
 
       var params = {
