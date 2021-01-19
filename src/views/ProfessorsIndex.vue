@@ -12,7 +12,7 @@
               ><input
                 class="form-control input-md"
                 v-model="allAttributeFilter"
-                placeholder="Search"
+                placeholder="Find Your Prof"
                 style="margin-right: 10px"
             /></strong>
             <button>Search</button>
