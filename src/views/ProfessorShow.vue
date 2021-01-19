@@ -1,5 +1,6 @@
 <template>
   <div class="professors-show" align="center">
+    <img src="/images/Favorites/icons8-floating-guru-100.png" alt="" />
     <h2>{{ professor[0].name }}</h2>
     <!-- <img v-bind:src="Professor.url" v-bind:alt="professor.name" /> -->
     <h3 align="center">School: {{ professor[0].school }}</h3>
@@ -15,14 +16,13 @@
     <h1>
       --------------------------------------------------------------------------------------------------
     </h1>
-
     <div v-for="review in professor[0].reviews">
       <h1>Reviewer Name:</h1>
-      <p style="text-align:center;">{{ review.reviewer }}</p>
+      <p style="text-align: center">{{ review.reviewer }}</p>
       <h1>Professor Rating:</h1>
-      <p style="text-align:center;">{{ review.rating }}</p>
+      <p style="text-align: center">{{ review.rating }}</p>
       <h1>Review:</h1>
-      <p style="text-align:center;">{{ review.text }}</p>
+      <p style="text-align: center">{{ review.text }}</p>
       <h1>
         --------------------------------------------------------------------------------------------------
       </h1>
@@ -36,14 +36,14 @@
 <script>
 import axios from "axios";
 export default {
-  data: function() {
+  data: function () {
     return {
       professor: [{}],
       reviews: [],
       errors: [],
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("api/professors/" + this.$route.params.id)
       .then((response) => {
