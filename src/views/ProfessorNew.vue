@@ -2,28 +2,28 @@
   <div style="margin-bottom: 2em" class="professors-new" align="center">
     <h2>New Professor</h2>
     <div align="center">
-      Name:
       <input
         type="text"
         v-model="newProfessorName"
+        placeholder="Name"
         style="margin-right: 10px"
       />
-      School:
       <input
         type="text"
         v-model="newProfessorSchool"
+        placeholder="School"
         style="margin-right: 10px"
       />
-      Title:
       <input
         type="text"
         v-model="newProfessorTitle"
+        placeholder="Title"
         style="margin-right: 10px"
       />
-      Department:
       <input
         type="text"
         v-model="newProfessorDepartment"
+        placeholder="Department"
         style="margin-right: 10px"
       />
     </div>
