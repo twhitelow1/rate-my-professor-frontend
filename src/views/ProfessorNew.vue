@@ -8,7 +8,7 @@
       <input type="text" v-model="newProfessorDepartment" />
     </div>
     <br />
-    <button v-on:click="createProfessor()">
+    <button style="margin-bottom: 2em" v-on:click="createProfessor()">
       Create Professor <br /><br />
       <img src="/images/Favorites/icons8-floating-guru-100.png" alt="" />
     </button>
