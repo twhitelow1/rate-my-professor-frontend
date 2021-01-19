@@ -7,7 +7,7 @@
       <input type="text" v-model="newReviewText" />
     </div>
     <br />
-    <button v-on:click="createReview()">
+    <button style="margin-bottom: 2em" v-on:click="createReview()">
       Submit Review <br />
       <br />
       <img src="/images/Favorites/icons8-speaker-notes-96.png" />
