@@ -17,6 +17,7 @@
       --------------------------------------------------------------------------------------------------
     </h1>
     <div v-for="review in professor[0].reviews">
+      <img src="/images/Favorites/icons8-speaker-notes-96.png" alt="" />
       <h1>Reviewer Name:</h1>
       <p style="text-align: center">{{ review.reviewer }}</p>
       <h1>Professor Rating:</h1>
