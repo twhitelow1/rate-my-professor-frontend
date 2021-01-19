@@ -302,7 +302,7 @@ blockquote {
 
 p {
   text-align: justify;
-  margin-bottom: 2em;
+  -bottom: 2em;
 }
 
 ul,
