@@ -4,9 +4,24 @@
       New Review for <strong>{{ professor[0].name }}</strong>
     </h2>
     <div align="center">
-      <input type="text" placeholder="Your Name" v-model="newReviewReviewer" />
-      <input type="text" placeholder="Rating" v-model="newReviewRating" />
-      <input type="text" placeholder="Review Text" v-model="newReviewText" />
+      <input
+        type="text"
+        placeholder="Your Name"
+        v-model="newReviewReviewer"
+        style="margin-right: 10px"
+      />
+      <input
+        type="text"
+        placeholder="Rating"
+        v-model="newReviewRating"
+        style="margin-right: 10px"
+      />
+      <input
+        type="text"
+        placeholder="Text"
+        v-model="newReviewText"
+        style="margin-right: 10px"
+      />
     </div>
     <br />
     <button v-on:click="createReview()">
