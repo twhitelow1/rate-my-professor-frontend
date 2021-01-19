@@ -41,7 +41,10 @@
         >
           <img src="/images/Favorites/icons8-floating-guru-100.png" alt="" />
           <h2>
-            <strong>{{ professor.name }}</strong> <br />{{ professor.school }}
+            <div>
+              <strong>{{ professor.name }}</strong>
+            </div>
+            <div>{{ professor.school }}</div>
           </h2>
           <router-link v-bind:to="`/professors/${professor.id}`" tag="button"
             >View Professor</router-link
